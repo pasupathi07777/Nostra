@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+   box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+:root{
+    --banner:#1D232C;
+    --white:#fff;
+}
+
+
+/* section-1  */
+.banner{
+    background-color: var(--banner);
+    color: var(--white);
+    /* font-size: 1.2rem; */
+}
+
+/* section-3 */
+
+.section-3__images::-webkit-scrollbar,.section-3__brands::-webkit-scrollbar,.section-5__products::-webkit-scrollbar {
+    display: none;
+}
+
+.section-3__images,.section-3__brands,.section-5__products{
+    -ms-overflow-style: none;  
+    scrollbar-width: none;     
+}
+
+/* section-8 */
+/* .input-letter:hover{
+    border: none;
+    outline: none;
+} */
+input{
+    border: 10px solid;
+  
+    
+
+}
