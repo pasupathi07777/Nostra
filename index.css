@@ -2,11 +2,16 @@
     margin: 0%;
     padding: 0%;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 body{
     font-family: "Roboto", sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
+   
 }
+
+
 :root{
     --banner:#1D232C;
     --white:#fff;

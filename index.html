@@ -26,17 +26,17 @@
 </head>
 
 <body>
-    <div class="main w-[100%] h-full     ">
+    <div class="main w-[100%] h-full relative     ">
         <!-- section-1 banner -->
-        <section class="section-1 w-full h-[35px]   ">
+        <section class="section-1 w-full h-[35px] cursor-pointer   ">
             <div class="banner  text-center  flex py-[0.5px] w-full h-full items-center">
                 <p class="w-full m-0 p-0 sm:text-xl">Sign Up and <span class="font-bold  ">GET 20% OFF for</span> your
                     first Order
 
                 </p>
-                <div class="close-icon cursor-pointer   ">
+                <div class="close-icon cursor-pointer pe-3  ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"
-                        class="w-7">
+                        class="w-4">
                         <path fillRule="evenodd"
                             d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
                             clipRule="evenodd" />
@@ -48,16 +48,39 @@
 
         </section>
 
+        <!-- silider nav bar -->
+
+        <nav class="slider-nav w-[50%] sm:hidden h-[100vh]  z-50 bg-[#1D232C] text-white fixed top-[0px] left-[-50%] flex ps-5 transition-all duration-700  ">
+            <ul class="nav  gap-2 font-medium  capitalize  flex flex-col mt-10  ">
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="index.html">Home</a></li>
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#NewArrivals">New Arrival</a></li>
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Most Wanted</a></li>
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Collections</a></li>
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Contact Us</a></li>
+
+            </ul>
+            <div class="close-nav cursor-pointer absolute top-[5px] right-[5px]    ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"
+                    class="w-6 font-semibold">
+                    <path fillRule="evenodd"
+                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                        clipRule="evenodd" />
+                </svg>
+
+            </div>
+
+        </nav>
+
         <!-- section-2  -->
         <section
-            class="section-2 flex justify-between px-4 items-center h-[60px] sticky top-0 left-0 right-0 z-50 bg-white ">
+            class="section-2 flex justify-between px-4 items-center h-[60px] sticky top-0 left-0 right-0 z-40 bg-white ">
             <div class="title capitalize ">
                 <h1 class="p-2 font-extrabold text-2xl">Nostra</h1>
             </div>
             <ul class="nav hidden gap-2 font-medium  capitalize  sm:flex  ">
                 <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Home</a></li>
-                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">New Arrival</a></li>
-                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Most Wanted</a></li>
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#NewArrivals">New Arrival</a></li>
+                <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#Most Wanted">Most Wanted</a></li>
                 <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Collections</a></li>
                 <li class="nav__link px-2 py-2  "><a class="hover:underline" href="#">Contact Us</a></li>
 
@@ -81,7 +104,7 @@
 
             <div
                 class="section-3__images overflow-x-auto flex rounded-xl relative no-scrollbar overflow-y-hidden w-full h-full  ">
-                <div class="blur-box w-full h-full absolute bg-black z-30 opacity-40">
+                <div class="blur-box w-full h-full absolute bg-black z-30 opacity-40 cursor-pointer ">
 
                 </div>
                 <div
@@ -101,7 +124,7 @@
                 </div>
 
                 <div
-                    class="arrows-icon text-white absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] flex justify-between w-full z-50 ">
+                    class="arrows-icon text-white absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] flex justify-between w-full z-40 ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"
                         class="w-10 sm:w-20 cursor-pointer left-icon ">
                         <path fillRule="evenodd"
@@ -126,33 +149,33 @@
         <section class="section-3 w-full p-4  overflow-hidden  mt-2 ">
             <h1 class="section-3__title font-extrabold text-2xl">Brands</h1>
             <div class="section-3__brands flex w-full overflow-x-scroll gap-10 capitalize justify-between">
-                <div class="brands-name   w-fit   flex flex-col items-center justify-center  ">
+                <div class="brands-name   w-fit   flex flex-col items-center justify-center cursor-pointer ">
 
                     <div class="brand-image w-20"><img src="./img/puma.png" alt=""></div>
                     <p class="font-semibold text-xl ">puma</p>
                 </div>
-                <div class="brands-name    w-fit  flex flex-col items-center justify-center">
+                <div class="brands-name    w-fit  flex flex-col items-center justify-center cursor-pointer">
                     <div class="brand-image w-20"><img src="./img/nike.png" alt=""></div>
                     <!-- <h2 class="font-semibold text-xl">Nike</h2> -->
                     <p class="font-semibold text-xl ">Nike</p>
                 </div>
-                <div class="brands-name   w-fit flex flex-col items-center justify-center">
+                <div class="brands-name   w-fit flex flex-col items-center justify-center cursor-pointer ">
                     <div class="brand-image w-20"><img src="./img/clothes.png" alt=""></div>
                     <p class="font-semibold text-xl">Gucci</p>
                 </div>
-                <div class="brands-name    w-fit  flex flex-col items-center justify-center">
+                <div class="brands-name    w-fit  flex flex-col items-center justify-center cursor-pointer">
                     <div class="brand-image w-20"><img src="./img/adidas.png" alt=""></div>
                     <p class="font-semibold text-xl">Adidas</p>
                 </div>
-                <div class="brands-name   w-fit  flex flex-col items-center justify-center">
+                <div class="brands-name   w-fit  flex flex-col items-center justify-center cursor-pointer">
                     <div class="brand-image w-20"><img src="./img/clothing.png" alt=""></div>
                     <p class="font-semibold text-xl">Zara</p>
                 </div>
-                <div class="brands-name   w-fit  flex flex-col items-center justify-center">
+                <div class="brands-name   w-fit  flex flex-col items-center justify-center cursor-pointer">
                     <div class="brand-image w-20"><img src="./img/vegan.png" alt=""></div>
                     <p class="font-semibold text-xl">Leaves</p>
                 </div>
-                <div class="brands-name    w-fit  flex flex-col items-center justify-center">
+                <div class="brands-name    w-fit  flex flex-col items-center justify-center cursor-pointer">
                     <div class="brand-image w-20 "><img src="./img/behance (1).png" alt=""></div>
                     <p class="font-semibold text-xl">Behance</p>
                 </div>
@@ -174,7 +197,7 @@
             </div>
 
             <div class="section-4__options grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
-                <div class="option-1 bg-[#F2F4F7] p-2 rounded ">
+                <div class="option-1 bg-[#F2F4F7] p-2 rounded cursor-pointer ">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             strokeWidth={1.5} stroke="currentColor" className="size-6" class="w-12 font-bold">
                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -185,7 +208,7 @@
                     <p class="text-[14px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime cum quos
                         ipsum praesentium, dolorum exercitationem!</p>
                 </div>
-                <div class="option-2 bg-[#F2F4F7] p-2 rounded">
+                <div class="option-2 bg-[#F2F4F7] p-2 rounded cursor-pointer">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             strokeWidth={1.5} stroke="currentColor" className="size-6" class="w-14">
                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -196,7 +219,7 @@
                     <p class="text-[14px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime cum quos
                         ipsum praesentium, dolorum exercitationem!</p>
                 </div>
-                <div class="option-3 bg-[#F2F4F7] p-2 rounded">
+                <div class="option-3 bg-[#F2F4F7] p-2 rounded cursor-pointer">
                     <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             strokeWidth={1.5} stroke="currentColor" className="size-6 " class="w-14">
                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -207,7 +230,7 @@
                     <p class="text-[14px]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime cum quos
                         ipsum praesentium, dolorum exercitationem!</p>
                 </div>
-                <div class="option-4 bg-[#F2F4F7] p-2 rounded">
+                <div class="option-4 bg-[#F2F4F7] p-2 rounded cursor-pointer">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                             stroke="currentColor" className="size-6" class="w-14">
@@ -225,7 +248,7 @@
         </section>
 
         <!-- section-5 -->
-        <section class="section-5 p-4 mt-2 ">
+        <section id="NewArrivals" class="section-5 p-4 mt-2 ">
             <h1 class="font-bold text-2xl">New Arrivals</h1>
             <div class="section-5__products grid grid-cols-2 md:grid-cols-4  gap-4 justify-between  items-center mt-4 ">
                 <div class="section-5__product h-[250px] rounded relative overflow-hidden ">
@@ -288,39 +311,39 @@
         </section>
 
         <!-- section-6 -->
-        <section class="section-5 p-4 mt-2 overflow-hidden ">
-            <h1 class="font-bold text-2xl">New Arrivals</h1>
+        <section id="Most Wanted" class="section-5 p-4 mt-2 overflow-hidden ">
+            <h1 class="font-bold text-2xl">Most Wanted</h1>
             <div class="section-5__products flex mt-4  overflow-x-auto w-full">
                 <div class="cc w-fit flex gap-4 ">
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-1.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-2.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-3.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-4.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-5.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-6.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-7.jpg " class="w-full h-full" alt="">
                     </div>
-                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden ">
+                    <div class="section-5__product w-[250px] h-[250px] rounded relative overflow-hidden cursor-pointer ">
 
                         <img src="./img/sec-6-6.jpg " class="w-full h-full" alt="">
                     </div>
