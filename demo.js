@@ -1,54 +1,11 @@
-// handburger
+// Selecting DOM elements
+let products__main = document.querySelector(".products");
+let search = document.querySelector(".section-3__s2__input");
+let arrivals__div = document.querySelectorAll(".Arrivals div");
+let colors__div = document.querySelectorAll(".Colors div");
+let occasion__div = document.querySelectorAll(".Occasion div");
 
-let hand_burger_icon=document.querySelector(".hand-burger-icon")
-let slider_nav=document.querySelector(".slider-nav")
-hand_burger_icon.addEventListener("click",()=>{
-    // slider_nav.classList.remove("left-[50%]")
-    // slider_nav.classList.add("left-0")
-    slider_nav.style.left="0"
-    
-    
-    
-})
-
-
-// slider nav 
-let close_nav=document.querySelector(".close-nav")
-let close_icon=document.querySelector(".close-icon")    
-
-
-close_nav.addEventListener("click",()=>{
-    // slider_nav.classList.remove("left-0")
-    // slider_nav.classList.add("left-[50%]")
-      slider_nav.style.left="-50%"
-      console.log("hii")
-
-})
-
-// // close function 
-// close_icon.addEventListener("click",()=>{
-//     section_1.classList.add("hidden")
-// })
-
-
-// let filter process 
-let products__main = document.querySelector(".products")
-
-let search = document.querySelector(".section-3__s2__input")
-// Arrivals
-let arrivals = document.querySelector(".Arrivals")
-let arrivals__div = arrivals.querySelectorAll("div")
-
-// Colors
-let colors = document.querySelector(".Colors")
-let colors__div = colors.querySelectorAll("div")
-
-// Occasion
-let occasion = document.querySelector(".Occasion")
-let occasion__div = occasion.querySelectorAll("div")
-
-let arr = []
-
+// Initial products data
 let products = [
     {
         name: "Men Solid Black T-Shirt",
@@ -100,8 +57,7 @@ let products = [
         rs: 458,
         mrp: "₹700",
         offer: 67,
-        occasion: "summer",
-        color: "green",
+        occasion: "summer"
 
 
     },
@@ -334,243 +290,95 @@ let products = [
 
 
 ]
-// mainengin
+
+// Initial filter array
+let arr = [];
+
+// Function to render products based on given array
 function renderProducts(productsToRender) {
     products__main.innerHTML = ''; // Clear the current products displayed
-    productsToRender.forEach((e) => {
-        let d = document.createElement("div");
-        d.innerHTML = `
-            <div class="section-3__s2__products__product capitalize bg-white w-fit justify-center items-center flex flex-col flex-grow-1 max-w-[160px] p-[5px]">
-                <img src="${e.img}" alt="${e.name}" class="w-full h-full max-h-[180px] max-w-[150px] rounded">
-                <div class="mt-1">
-                    <p class="name text-[#8B8B8B] font-medium">${e.brand}</p>
-                    <p class="details overflow-x-auto w-full">${e.name}</p>
+    productsToRender.forEach((product) => {
+        let productDiv = document.createElement("div");
+        productDiv.classList.add("section-3__s2__products__product", "capitalize", "bg-white", "w-fit", "justify-center", "items-center", "flex", "flex-col", "flex-grow-1", "max-w-[160px]", "p-[5px]");
+        productDiv.innerHTML = `
+            <img src="${product.img}" alt="${product.name}" class="w-full h-full max-h-[180px] max-w-[150px] rounded">
+            <div class="mt-1">
+                <p class="name text-[#8B8B8B] font-medium">${product.brand}</p>
+                <p class="details overflow-x-auto w-full">${product.name}</p>
+            </div>
+            <div class="price flex flex-col w-full">
+                <div class="flex items-center gap-1">
+                    <p class="text-2xl font-semibold">₹${product.rs}</p>
+                    <p class="text-[#8B8B8B]"><del>${product.mrp}</del></p>
                 </div>
-                <div class="price flex flex-col w-full">
-                    <div class="flex items-center gap-1">
-                        <p class="text-2xl font-semibold">₹${e.rs}</p>
-                        <p class="text-[#8B8B8B]"><del>${e.mrp}</del></p>
-                    </div>
-                    <p class="text-[#409243]">${e.offer}% off</p>
-                </div>
+                <p class="text-[#409243]">${product.offer}% off</p>
             </div>`;
-        products__main.appendChild(d);
+        products__main.appendChild(productDiv);
     });
 }
 
-// Initial render
+// Initial render of all products
 renderProducts(products);
 
-
-
-
-
-
-
-
-
-// search.addEventListener("keyup", (event) => {
-//     let input = event.target.value.toLowerCase();
-
-//     let filter__process = products.filter((e) => {
-//         return (e.name && e.name.toLowerCase().includes(input)) ||
-//                (e.occasion && e.occasion.toLowerCase().includes(input)) ||
-//                (e.brand && e.brand.toLowerCase().includes(input)) ||
-//                (e.type && e.type.toLowerCase().includes(input)) ||
-//                (e.color && e.color.toLowerCase().includes(input));
-//     });
-
-//     renderProducts(filter__process);
-// });
-
-
-
-
-
-
-
-// function checkoutfilter() {
-//    // Start with all products
-//    let filteredProducts = products;
-
-//     if (arr.length) {
-//         filteredProducts = filteredProducts.filter((pro) => {
-           
-//             return arr.some((a) => {
-//                 if (typeof a === 'string') {
-//                     return pro.color === a || pro.occasion === a;
-//                 } else if (typeof a === 'number') {
-//                     // Price range filters
-//                     if (a === 500) {
-//                         return pro.rs >= 250 && pro.rs <= 500;
-//                     } else if (a === 1000) {
-//                         return pro.rs > 500 && pro.rs <= 1000;
-//                     } else if (a === 1500) {
-//                         return pro.rs > 1000 && pro.rs <= 1500;
-//                     }
-//                 }
-               
-//             });
-//         });
-//     }
-
-//     renderProducts(filteredProducts);
-//     console.log(filteredProducts);
-// }
-// Combined filter function
-function combinedFilter(input) {
+// Function to apply filters and render products accordingly
+function applyFilters() {
     let filteredProducts = products;
 
-    // Text input filtering
-    if (input) {
-        filteredProducts = filteredProducts.filter((e) => {
-            return (e.name && e.name.toLowerCase().includes(input)) ||
-                   (e.occasion && e.occasion.toLowerCase().includes(input)) ||
-                   (e.brand && e.brand.toLowerCase().includes(input)) ||
-                   (e.type && e.type.toLowerCase().includes(input)) ||
-                   (e.color && e.color.toLowerCase().includes(input));
-        });
+    // Apply search filter
+    let input = search.value.trim().toLowerCase();
+    if (input !== "") {
+        filteredProducts = filteredProducts.filter((product) =>
+            product.name.toLowerCase().includes(input) || product.type.toLowerCase().includes(input)
+        );
     }
 
-    // Array filtering (color, occasion, price range)
-    if (arr.length) {
-        filteredProducts = filteredProducts.filter((pro) => {
-            return arr.some((a) => {
-                if (typeof a === 'string') {
-                    return pro.color === a || pro.occasion === a;
-                } else if (typeof a === 'number') {
-                    // Price range filters
-                    if (a === 500) {
-                        return pro.rs >= 250 && pro.rs <= 500;
-                    } else if (a === 1000) {
-                        return pro.rs > 500 && pro.rs <= 1000;
-                    } else if (a === 1500) {
-                        return pro.rs > 1000 && pro.rs <= 1500;
-                    }
-                }
-            });
-        });
+    // Apply checkbox filters
+    if (arr.length > 0) {
+        filteredProducts = filteredProducts.filter((product) =>
+            arr.includes(product.color) || arr.includes(product.occasion) || arr.includes(product.rs.toString())
+        );
     }
 
+    // Render filtered products
     renderProducts(filteredProducts);
-    console.log(filteredProducts);
 }
 
-// Event listener for search input
-search.addEventListener("keyup", (event) => {
-    let input = event.target.value.toLowerCase(); // Convert input to lowercase
-    combinedFilter(input); // Call combined filter function with input
+// Event listeners for checkbox changes
+arrivals__div.forEach((e) => {
+    e.addEventListener("change", () => {
+        let value = e.querySelector("input").value;
+        if (e.querySelector("input").checked) {
+            arr.push(value);
+        } else {
+            arr = arr.filter((item) => item !== value);
+        }
+        applyFilters();
+    });
 });
 
-// Initial call to render all products
-combinedFilter("");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// first checkout filter 
-
-arrivals__div.forEach((e) => {
-
-
-})
-// rs filter 
-arrivals__div.forEach((e) => {
-    e.addEventListener("change", () => {
-        // console.log(e)
-        if (e.querySelector("input").checked) {
-            arr.push(Number(event.target.value))
-            console.log(arr)
-            // checkoutfilter()
-            combinedFilter()
-
-
-
-
-
-
-        } else {
-            arr = arr.filter((e) => e !== Number(event.target.value))
-            console.log(arr)
-            // checkoutfilter()
-            console.log(arr)
-            combinedFilter()
-
-        }
-
-    })
-
-})
 colors__div.forEach((e) => {
     e.addEventListener("change", () => {
+        let value = e.querySelector("input").value;
         if (e.querySelector("input").checked) {
-            arr.push(event.target.value)
-            // checkoutfilter()
-            console.log(arr)
-            combinedFilter()
-
-
+            arr.push(value);
         } else {
-            arr = arr.filter((e) => e != event.target.value)
-            // checkoutfilter()
-            console.log(arr)
-            combinedFilter()
-
+            arr = arr.filter((item) => item !== value);
         }
+        applyFilters();
+    });
+});
 
-    })
-
-})
 occasion__div.forEach((e) => {
     e.addEventListener("change", () => {
+        let value = e.querySelector("input").value;
         if (e.querySelector("input").checked) {
-            arr.push(event.target.value)
-            console.log(arr)
-            // checkoutfilter()
-            combinedFilter()
-
-
+            arr.push(value);
         } else {
-            arr = arr.filter((e) => e != event.target.value)
-            // checkoutfilter()
-            combinedFilter()
-
+            arr = arr.filter((item) => item !== value);
         }
+        applyFilters();
+    });
+});
 
-    })
-
-})
-
-
+// Event listener for search input keyup event
+search.addEventListener("keyup", applyFilters);
