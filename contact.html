@@ -19,6 +19,223 @@
 </head>
 
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" href="collection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</head>
+<body class="relative">
+    <div class="w-[100%] h-[100%] relative">
+        <div class="section-3__s1 pasu fixed top-[-60px] sm:hidden left-0 z-10 flex gap-5 w-full justify-between px-4 h-fit bg-white pb-2 shadow-xl transition-all duration-1000">
+            <!-- Your filter content here -->
+            <!-- <div class="section-3__3__box flex1 flex-col gap-1  ">
+                <h1 class="font-bold text-xl">Pricing</h1>
+                <div class="ps-1 Arrivals font-medium flex flex-col gap-1 ">
+                    <div>
+                        <input type="checkbox" name="" id="" value="500">
+                        <label for="">Below ₹500</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="1000">
+                        <label for="">Below ₹1000</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="1500">
+                        <label for=""> Below ₹1500</label>
+                    </div>
+                </div>
+
+            </div> -->
+            <div class="section-3__3__box flex flex-col gap-1 ">
+                <h1 class="font-bold text-xl ">Occasion</h1>
+                <div class="ps-1 Occasion font-medium flex flex-col gap-1 ">
+                    <div>
+                        <input type="checkbox" name="" id="" value="summer" name="ff">
+                        <label for="">summer</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="party" name="ff">
+                        <label for="">party</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="beach" name="ff">
+                        <label for=""> beach</label>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="section-3__3__box flex flex-col gap-1 ">
+                <h1 class="font-bold text-xl ">Colors</h1>
+                <div class="ps-1 Colors font-medium flex flex-col gap-1 ">
+                    <div>
+                        <input type="checkbox" name="" id="" value="blue">
+                        <label for=""> blue</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="black">
+                        <label for=""> black</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="white">
+                        <label for=""> White</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="" id="" value="green">
+                        <label for=""> Green</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="slider-nav w-[50%] sm:hidden h-[100vh] z-50 bg-[#1D232C] text-white fixed top-[0px] left-[-50%] flex ps-5 transition-all duration-700">
+            <!-- Your navigation content here -->
+        </nav>
+
+        <section class="section-2 flex flex-col justify-between items-center sticky top-0 left-0 right-0 z-40 bg-white px-4">
+            <div class="flex w-full justify-between items-center h-[60px] sticky top-0 left-0 right-0 z-40 bg-white">
+                <div class="title capitalize">
+                    <h1 class="p-2 font-extrabold text-2xl">Nostra</h1>
+                </div>
+                <ul class="nav hidden gap-2 font-medium capitalize sm:flex">
+                    <!-- Your navigation links here -->
+                </ul>
+                <div class="hand-burger-icon sm:hidden font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 w-7">
+                        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            <div class="search sm:hidden text-center w-full max-w-[100%] py-2 px-0 flex gap-5">
+                <div class="box sm:hidden w-[150px] rounded flex justify-center items-center font-bold capitalize border border-1 gap-1">
+                    Filter
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-5 down transition-all duration-1000">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+                <input type="text" placeholder="Search" class="section-3__s2__input w-[100%] md:w-[80%] mb-0 rounded mx-auto">
+            </div>
+        </section>
+
+        <section class="section-3 flex w-full h-full ps-[0px] sm:ps-[150px]">
+            <div class="section-3__s1 w-[150px] hidden flex-col ps-6 mt-5 gap-5 fixed top-[60px] left-0 bottom-0 sm:flex">
+                <!-- Your filter content here -->
+                <div
+                class="section-3__s1  w-[150px]  hidden flex-col   ps-6 mt-5 gap-5 fixed  top-[60px] left-0 bottom-0 sm:flex">
+                <div class="section-3__3__box flex flex-col gap-1 ">
+                    <h1 class="font-bold text-xl ">Occasion</h1>
+                    <div class="ps-2 Occasion font-medium flex flex-col gap-1 ">
+                        <div>
+                            <input type="checkbox" name="" id="" value="summer" name="ff">
+                            <label for="">summer</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="party" name="ff">
+                            <label for="">party</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="beach" name="ff">
+                            <label for=""> beach</label>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="section-3__3__box flex flex-col gap-1 ">
+                    <h1 class="font-bold text-xl ">Colors</h1>
+                    <div class="ps-2 Colors font-medium flex flex-col gap-1 ">
+                        <div>
+                            <input type="checkbox" name="" id="" value="blue">
+                            <label for=""> blue</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="black">
+                            <label for=""> black</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="white">
+                            <label for=""> White</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="green">
+                            <label for=""> Green</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section-3__3__box flex flex-col gap-1  ">
+                    <h1 class="font-bold text-xl">Pricing</h1>
+                    <div class=" Arrivals font-medium flex flex-col gap-1 ">
+                        <div>
+                            <input type="checkbox" name="" id="" value="500">
+                            <label for="">Below ₹500</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="1000">
+                            <label for=""> Below ₹1000</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" value="1500">
+                            <label for="">Below ₹1500</label>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            </div>
+            <div class="section-3__s2 w-[100%] flex flex-col items-center overflow-hidden">
+                <div class="section-3__s2__products flex justify-center items-center w-full flex-col">
+                    <div class="search text-center w-full max-w-[100%] py-2 px-2 hidden sm:flex">
+                        <div class="box sm:hidden w-[150px] bg-slate-500">Filter</div>
+                        <input type="text" placeholder="Search" class="section-3__s2__input w-[100%] md:w-[80%] mb-0 rounded mx-auto">
+                    </div>
+                    <div class="w-fit products grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 px-2 py-0 gap-2">
+                        <!-- Your product content here -->
+                          <div
+                            class="section-3__s2__products__product  bg-white w-fit justify-center items-center flex flex-col flex-grow-1  max-w-[160px] p-[5px]     ">
+                            <img src="./img/summer/black-t.webp" alt="Black t shirt"
+                                class="w-full h-full  max-h-[180px] max-w-[150px] rounded">
+                            <div class="mt-1">
+                                <p class="name text-[#8B8B8B] font-medium">Adidas</p>
+                                <p class="details overflow-x-auto w-full">Men Solid Black T-Shirt</p>
+                            </div>
+                            <div class="price flex flex-col   w-full">
+                                <div class="flex items-center gap-1 ">
+                                    <p class="text-2xl font-semibold    ">₹458</p>
+                                    <p class="text-[#8B8B8B]"><del>₹2,299</del></p>
+                                </div>
+                                <p class="text-[#409243]">67% off</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="collection.js"></script>
+</body>
+</html>
+
 
 
 

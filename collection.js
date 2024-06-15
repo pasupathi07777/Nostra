@@ -10,6 +10,117 @@ hand_burger_icon.addEventListener("click",()=>{
     
     
 })
+// add top px
+
+function updateClassBasedOnScreenWidth() {
+    let add_c=document.querySelector(".section-3__s1")
+    
+
+    if (window.matchMedia("(min-width: 640px)").matches) {
+        add_c.style.top="80px"
+        
+       
+      
+    } 
+    if (window.matchMedia("(max-width: 640px)").matches) {
+       
+        ffdd.style.top = "-520px";
+        
+       
+      
+    } 
+
+    // console.log("width")
+}
+window.addEventListener("resize", updateClassBasedOnScreenWidth);
+
+
+// filter animation
+
+let ff = document.querySelector(".box");
+let ffdd = document.querySelector(".pasu");
+let ffddss = document.querySelector(".down");
+
+ff.addEventListener("mouseover", () => {
+    if (window.matchMedia("(max-width: 639px)").matches){
+        ffdd.style.top = "117px";
+
+    }
+   
+});
+
+ff.addEventListener("mouseout", () => {
+    if (window.matchMedia("(max-width: 639px)").matches){
+        ffdd.style.top = "-520px";
+
+    }
+     // This will revert the style to its original value
+});
+
+ffdd.addEventListener("mouseover",()=>{
+    if (window.matchMedia("(max-width: 639px)").matches){
+        ffdd.style.top = "117px";
+       
+
+    }
+   
+    if (ffddss.style.transform === "rotate(180deg)") {
+        ffddss.style.transform = "";
+    } else {
+        ffddss.style.transform = "rotate(180deg)";
+    }
+
+})
+ffdd.addEventListener("mouseout",()=>{
+    if (window.matchMedia("(max-width: 639px)").matches){
+          ffdd.style.top = "-520px";
+       
+
+    }
+   
+   
+  
+    if (ffddss.style.transform === "rotate(180deg)") {
+        ffddss.style.transform = "";
+    } else {
+        ffddss.style.transform = "rotate(180deg)";
+    }
+
+})
+ff.addEventListener("click", () => {
+    ffdd.classList.toggle("top-[117px]");
+    if (ffddss.style.transform === "rotate(180deg)") {
+        ffddss.style.transform = "";
+    } else {
+        ffddss.style.transform = "rotate(180deg)";
+    }
+});
+
+
+
+
+// function updateClassBasedOnScreenWidth() {
+//     let element = document.querySelector(".pasu");
+//     let element_2 = document.querySelector(".down");
+
+//     if (window.matchMedia("(min-width: 640px)").matches) {
+//         element.classList.remove("pasu");
+//         ff.classList.remove("box")
+//         // Uncomment this line if you want to update element_2 as well
+//         // element_2.classList.remove("pasu");
+//     } else {
+//         element.classList.add("pasu");
+//     }
+// }
+
+// // Initial check
+// updateClassBasedOnScreenWidth();
+
+// // Add event listener for screen resize
+// window.addEventListener("resize", updateClassBasedOnScreenWidth);
+
+
+
 
 
 // slider nav 
@@ -18,17 +129,12 @@ let close_icon=document.querySelector(".close-icon")
 
 
 close_nav.addEventListener("click",()=>{
-    // slider_nav.classList.remove("left-0")
-    // slider_nav.classList.add("left-[50%]")
+   
       slider_nav.style.left="-50%"
       console.log("hii")
 
 })
 
-// // close function 
-// close_icon.addEventListener("click",()=>{
-//     section_1.classList.add("hidden")
-// })
 
 
 // let filter process 
@@ -334,9 +440,9 @@ let products = [
 
 
 ]
-// mainengin
+
 function renderProducts(productsToRender) {
-    products__main.innerHTML = ''; // Clear the current products displayed
+    products__main.innerHTML = ''; 
     productsToRender.forEach((e) => {
         let d = document.createElement("div");
         d.innerHTML = `
@@ -369,55 +475,7 @@ renderProducts(products);
 
 
 
-// search.addEventListener("keyup", (event) => {
-//     let input = event.target.value.toLowerCase();
-
-//     let filter__process = products.filter((e) => {
-//         return (e.name && e.name.toLowerCase().includes(input)) ||
-//                (e.occasion && e.occasion.toLowerCase().includes(input)) ||
-//                (e.brand && e.brand.toLowerCase().includes(input)) ||
-//                (e.type && e.type.toLowerCase().includes(input)) ||
-//                (e.color && e.color.toLowerCase().includes(input));
-//     });
-
-//     renderProducts(filter__process);
-// });
-
-
-
-
-
-
-
-// function checkoutfilter() {
-//    // Start with all products
-//    let filteredProducts = products;
-
-//     if (arr.length) {
-//         filteredProducts = filteredProducts.filter((pro) => {
-           
-//             return arr.some((a) => {
-//                 if (typeof a === 'string') {
-//                     return pro.color === a || pro.occasion === a;
-//                 } else if (typeof a === 'number') {
-//                     // Price range filters
-//                     if (a === 500) {
-//                         return pro.rs >= 250 && pro.rs <= 500;
-//                     } else if (a === 1000) {
-//                         return pro.rs > 500 && pro.rs <= 1000;
-//                     } else if (a === 1500) {
-//                         return pro.rs > 1000 && pro.rs <= 1500;
-//                     }
-//                 }
-               
-//             });
-//         });
-//     }
-
-//     renderProducts(filteredProducts);
-//     console.log(filteredProducts);
-// }
-// Combined filter function
+// Combined filter function code sponcer by chatgpt
 function combinedFilter(input) {
     let filteredProducts = products;
 
@@ -467,39 +525,6 @@ combinedFilter("");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // first checkout filter 
 
 arrivals__div.forEach((e) => {
@@ -515,6 +540,18 @@ arrivals__div.forEach((e) => {
             console.log(arr)
             // checkoutfilter()
             combinedFilter()
+            if (window.matchMedia("(max-width: 639px)").matches){
+                ffdd.style.top = "-520px";
+                
+        
+            }
+ 
+        
+            if (ffddss.style.transform === "rotate(180deg)") {
+                ffddss.style.transform = "";
+            } else {
+                ffddss.style.transform = "rotate(180deg)";
+            }
 
 
 
@@ -527,6 +564,16 @@ arrivals__div.forEach((e) => {
             // checkoutfilter()
             console.log(arr)
             combinedFilter()
+            if (window.matchMedia("(max-width: 639px)").matches){
+                ffdd.style.top = "-520px";
+                
+        
+            }
+            if (ffddss.style.transform === "rotate(180deg)") {
+                ffddss.style.transform = "";
+            } else {
+                ffddss.style.transform = "rotate(180deg)";
+            }
 
         }
 
@@ -540,6 +587,16 @@ colors__div.forEach((e) => {
             // checkoutfilter()
             console.log(arr)
             combinedFilter()
+            if (window.matchMedia("(max-width: 639px)").matches){
+                ffdd.style.top = "-520px";
+                
+        
+            }
+            if (ffddss.style.transform === "rotate(180deg)") {
+                ffddss.style.transform = "";
+            } else {
+                ffddss.style.transform = "rotate(180deg)";
+            }
 
 
         } else {
@@ -547,6 +604,16 @@ colors__div.forEach((e) => {
             // checkoutfilter()
             console.log(arr)
             combinedFilter()
+            if (window.matchMedia("(max-width: 639px)").matches){
+                ffdd.style.top = "-520px";
+                
+        
+            }
+            if (ffddss.style.transform === "rotate(180deg)") {
+                ffddss.style.transform = "";
+            } else {
+                ffddss.style.transform = "rotate(180deg)";
+            }
 
         }
 
@@ -560,17 +627,51 @@ occasion__div.forEach((e) => {
             console.log(arr)
             // checkoutfilter()
             combinedFilter()
+            // ffdd.style.top = "0px";
+            if (window.matchMedia("(max-width: 639px)").matches){
+                ffdd.style.top = "-520px";
+                
+        
+            }
+            if (ffddss.style.transform === "rotate(180deg)") {
+                ffddss.style.transform = "";
+            } else {
+                ffddss.style.transform = "rotate(180deg)";
+            }
+
 
 
         } else {
             arr = arr.filter((e) => e != event.target.value)
             // checkoutfilter()
             combinedFilter()
+            // ffdd.style.top = "0px";
+            if (window.matchMedia("(max-width: 639px)").matches){
+                ffdd.style.top = "-520px";
+                
+        
+            }
+            if (ffddss.style.transform === "rotate(180deg)") {
+                ffddss.style.transform = "";
+            } else {
+                ffddss.style.transform = "rotate(180deg)";
+            }
 
         }
 
     })
 
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
