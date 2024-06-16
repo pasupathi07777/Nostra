@@ -1,115 +1,126 @@
 // handburger
 
-let hand_burger_icon=document.querySelector(".hand-burger-icon")
-let slider_nav=document.querySelector(".slider-nav")
-hand_burger_icon.addEventListener("click",()=>{
+let hand_burger_icon = document.querySelector(".hand-burger-icon")
+let slider_nav = document.querySelector(".slider-nav")
+hand_burger_icon.addEventListener("click", () => {
     // slider_nav.classList.remove("left-[50%]")
     // slider_nav.classList.add("left-0")
-    slider_nav.style.left="0"
-    
-    
-    
+    slider_nav.style.left = "0"
+
+
+
 })
-// add top px
+// add top px max screen
 
 function updateClassBasedOnScreenWidth() {
-    let add_c=document.querySelector(".section-3__s1")
-    
+    let add_c = document.querySelector(".section-3__s1")
+
 
     if (window.matchMedia("(min-width: 640px)").matches) {
-        add_c.style.top="80px"
-        
-       
-      
-    } 
-    if (window.matchMedia("(max-width: 640px)").matches) {
-       
-        ffdd.style.top = "-520px";
-        
-       
-      
-    } 
+        add_c.style.top = "80px"
 
-    // console.log("width")
+
+
+
+    }
+    if (window.matchMedia("(max-width: 640px)").matches) {
+
+        ffdd.style.top = "-520px";
+
+
+
+
+    }
+
+
 }
-window.addEventListener("resize", updateClassBasedOnScreenWidth);
+window.addEventListener("resize", updateClassBasedOnScreenWidth);//
 
 
 // filter animation
 
-let ff = document.querySelector(".box");
-let ffdd = document.querySelector(".pasu");
-let ffddss = document.querySelector(".down");
+let ff = document.querySelector(".box");    //filter box
+let ffdd = document.querySelector(".pasu");  //check-box 
+let ffddss = document.querySelector(".down"); //arrow
+// all 
 
-ff.addEventListener("mouseover", () => {
-    if (window.matchMedia("(max-width: 639px)").matches){
-        ffdd.style.top = "117px";
+// ff.addEventListener("mouseover", () => {
+//     console.log("mouseover")
+//     if (window.matchMedia("(min-width: 639px)").matches){
+//         ffdd.style.top = "117px";
 
-    }
-   
-});
+//     }
+//     if (ffddss.style.transform === "rotate(180deg)") {
+//         ffddss.style.transform = "";
+//     } else {
+//         ffddss.style.transform = "rotate(180deg)";
+//     }
 
-ff.addEventListener("mouseout", () => {
-    if (window.matchMedia("(max-width: 639px)").matches){
-        ffdd.style.top = "-520px";
+// });
 
-    }
-     // This will revert the style to its original value
-});
+// ff.addEventListener("mouseout", () => {
+//     console.log("mouseout")
+//     if (window.matchMedia("(min-width: 639px)").matches){
+//         ffdd.style.top = "-569px";
 
-ffdd.addEventListener("mouseover",()=>{
-    if (window.matchMedia("(max-width: 639px)").matches){
-        ffdd.style.top = "117px";
-       
+//     }
+//     if (ffddss.style.transform === "rotate(180deg)") {
+//         ffddss.style.transform = "";
+        
+//     } else {
+//         ffddss.style.transform = "rotate(180deg)";
+//     }
+//      // This will revert the style to its original value
+// });
 
-    }
-   
-    if (ffddss.style.transform === "rotate(180deg)") {
-        ffddss.style.transform = "";
-    } else {
-        ffddss.style.transform = "rotate(180deg)";
-    }
 
-})
-ffdd.addEventListener("mouseout",()=>{
-    if (window.matchMedia("(max-width: 639px)").matches){
-          ffdd.style.top = "-520px";
-       
 
-    }
-   
-   
-  
-    if (ffddss.style.transform === "rotate(180deg)") {
-        ffddss.style.transform = "";
-    } else {
-        ffddss.style.transform = "rotate(180deg)";
-    }
-
-})
 ff.addEventListener("click", () => {
-    ffdd.classList.toggle("top-[117px]");
+    console.log("click")
+    // ffdd.classList.toggle("top-[117px]");
+    ffdd.classList.toggle("toppp");
+
     if (ffddss.style.transform === "rotate(180deg)") {
-        ffddss.style.transform = "";
+        // ffddss.style.transform = "";
+        ffddss.style.transform = "rotate(0deg)";
     } else {
         ffddss.style.transform = "rotate(180deg)";
     }
+
+
+
+
+
+
+
+
 });
 
 
 
 
 // function updateClassBasedOnScreenWidth() {
+//     // ffdd.classList.toggle("top-[117px]");
+
+
+
 //     let element = document.querySelector(".pasu");
 //     let element_2 = document.querySelector(".down");
 
 //     if (window.matchMedia("(min-width: 640px)").matches) {
 //         element.classList.remove("pasu");
 //         ff.classList.remove("box")
+//         // if (ffdd.classList.contains("toppp")) {
+//         //     ffdd.classList.remove("toppp");
+//         //     console.log("Class 'toppp' was removed.");
+//         // }
+
+
 //         // Uncomment this line if you want to update element_2 as well
 //         // element_2.classList.remove("pasu");
 //     } else {
 //         element.classList.add("pasu");
+//         ff.classList.add("box")
 //     }
 // }
 
@@ -124,14 +135,14 @@ ff.addEventListener("click", () => {
 
 
 // slider nav 
-let close_nav=document.querySelector(".close-nav")
-let close_icon=document.querySelector(".close-icon")    
+let close_nav = document.querySelector(".close-nav")
+let close_icon = document.querySelector(".close-icon")
 
 
-close_nav.addEventListener("click",()=>{
-   
-      slider_nav.style.left="-50%"
-      console.log("hii")
+close_nav.addEventListener("click", () => {
+
+    slider_nav.style.left = "-50%"
+    console.log("hii")
 
 })
 
@@ -442,7 +453,7 @@ let products = [
 ]
 
 function renderProducts(productsToRender) {
-    products__main.innerHTML = ''; 
+    products__main.innerHTML = '';
     productsToRender.forEach((e) => {
         let d = document.createElement("div");
         d.innerHTML = `
@@ -483,10 +494,10 @@ function combinedFilter(input) {
     if (input) {
         filteredProducts = filteredProducts.filter((e) => {
             return (e.name && e.name.toLowerCase().includes(input)) ||
-                   (e.occasion && e.occasion.toLowerCase().includes(input)) ||
-                   (e.brand && e.brand.toLowerCase().includes(input)) ||
-                   (e.type && e.type.toLowerCase().includes(input)) ||
-                   (e.color && e.color.toLowerCase().includes(input));
+                (e.occasion && e.occasion.toLowerCase().includes(input)) ||
+                (e.brand && e.brand.toLowerCase().includes(input)) ||
+                (e.type && e.type.toLowerCase().includes(input)) ||
+                (e.color && e.color.toLowerCase().includes(input));
         });
     }
 
@@ -540,13 +551,13 @@ arrivals__div.forEach((e) => {
             console.log(arr)
             // checkoutfilter()
             combinedFilter()
-            if (window.matchMedia("(max-width: 639px)").matches){
-                ffdd.style.top = "-520px";
-                
-        
+            if (window.matchMedia("(max-width: 639px)").matches) {
+                ffdd.classList.toggle("toppp")
+
+
             }
- 
-        
+
+
             if (ffddss.style.transform === "rotate(180deg)") {
                 ffddss.style.transform = "";
             } else {
@@ -564,10 +575,10 @@ arrivals__div.forEach((e) => {
             // checkoutfilter()
             console.log(arr)
             combinedFilter()
-            if (window.matchMedia("(max-width: 639px)").matches){
-                ffdd.style.top = "-520px";
-                
-        
+            if (window.matchMedia("(max-width: 639px)").matches) {
+                ffdd.classList.toggle("toppp")
+
+
             }
             if (ffddss.style.transform === "rotate(180deg)") {
                 ffddss.style.transform = "";
@@ -587,10 +598,10 @@ colors__div.forEach((e) => {
             // checkoutfilter()
             console.log(arr)
             combinedFilter()
-            if (window.matchMedia("(max-width: 639px)").matches){
-                ffdd.style.top = "-520px";
-                
-        
+            if (window.matchMedia("(max-width: 639px)").matches) {
+                ffdd.classList.toggle("toppp")
+
+
             }
             if (ffddss.style.transform === "rotate(180deg)") {
                 ffddss.style.transform = "";
@@ -604,10 +615,10 @@ colors__div.forEach((e) => {
             // checkoutfilter()
             console.log(arr)
             combinedFilter()
-            if (window.matchMedia("(max-width: 639px)").matches){
-                ffdd.style.top = "-520px";
-                
-        
+            if (window.matchMedia("(max-width: 639px)").matches) {
+                ffdd.classList.toggle("toppp")
+
+
             }
             if (ffddss.style.transform === "rotate(180deg)") {
                 ffddss.style.transform = "";
@@ -628,11 +639,13 @@ occasion__div.forEach((e) => {
             // checkoutfilter()
             combinedFilter()
             // ffdd.style.top = "0px";
-            if (window.matchMedia("(max-width: 639px)").matches){
-                ffdd.style.top = "-520px";
-                
-        
+            if (window.matchMedia("(max-width: 639px)").matches) {
+                // ffdd.style.top = "-520px";
+                ffdd.classList.toggle("toppp")
+
+
             }
+         
             if (ffddss.style.transform === "rotate(180deg)") {
                 ffddss.style.transform = "";
             } else {
@@ -646,11 +659,13 @@ occasion__div.forEach((e) => {
             // checkoutfilter()
             combinedFilter()
             // ffdd.style.top = "0px";
-            if (window.matchMedia("(max-width: 639px)").matches){
-                ffdd.style.top = "-520px";
+            if (window.matchMedia("(max-width: 639px)").matches) {
                 
-        
+                ffdd.classList.toggle("toppp")
+
+
             }
+            ffdd.style.top = "-520px";
             if (ffddss.style.transform === "rotate(180deg)") {
                 ffddss.style.transform = "";
             } else {

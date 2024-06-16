@@ -29,7 +29,7 @@ close_nav.addEventListener("click",()=>{
 })
 
 // close function 
-close_icon.addEventListener("click",()=>{
-    section_1.classList.add("hidden")
-})
+// close_icon.addEventListener("click",()=>{
+//     section_1.classList.add("hidden")
+// })
 
