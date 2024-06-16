@@ -447,14 +447,14 @@ function renderProducts(productsToRender) {
         let d = document.createElement("div");
         d.innerHTML = `
             <div class="section-3__s2__products__product capitalize bg-white w-fit justify-center items-center flex flex-col flex-grow-1 max-w-[160px] p-[5px]">
-                <img src="${e.img}" alt="${e.name}" class="w-full h-full max-h-[180px] max-w-[150px] rounded">
+                <img src="${e.img}" alt="${e.name}" class="w-full h-[160px] max-w-[150px] rounded">
                 <div class="mt-1">
                     <p class="name text-[#8B8B8B] font-medium">${e.brand}</p>
-                    <p class="details overflow-x-auto w-full">${e.name}</p>
+                    <p class="details overflow-x-auto text-[14px] w-full">${e.name}</p>
                 </div>
                 <div class="price flex flex-col w-full">
                     <div class="flex items-center gap-1">
-                        <p class="text-2xl font-semibold">₹${e.rs}</p>
+                        <p class="text-[16px] font-semibold">₹${e.rs}</p>
                         <p class="text-[#8B8B8B]"><del>${e.mrp}</del></p>
                     </div>
                     <p class="text-[#409243]">${e.offer}% off</p>
