@@ -3,8 +3,7 @@
 let hand_burger_icon = document.querySelector(".hand-burger-icon")
 let slider_nav = document.querySelector(".slider-nav")
 hand_burger_icon.addEventListener("click", () => {
-    // slider_nav.classList.remove("left-[50%]")
-    // slider_nav.classList.add("left-0")
+  
     slider_nav.style.left = "0"
 
 
@@ -73,15 +72,19 @@ let ffddss = document.querySelector(".down"); //arrow
 //      // This will revert the style to its original value
 // });
 
-
+let filter_text=document.querySelector(".filter")
+let close__text=document.querySelector(".close")
 
 ff.addEventListener("click", () => {
+    filter_text.classList.toggle("clo")
+    close__text.classList.toggle("gone")
     console.log("click")
-    // ffdd.classList.toggle("top-[117px]");
+    
     ffdd.classList.toggle("toppp");
 
+
     if (ffddss.style.transform === "rotate(180deg)") {
-        // ffddss.style.transform = "";
+       
         ffddss.style.transform = "rotate(0deg)";
     } else {
         ffddss.style.transform = "rotate(180deg)";
@@ -552,17 +555,17 @@ arrivals__div.forEach((e) => {
             // checkoutfilter()
             combinedFilter()
             if (window.matchMedia("(max-width: 639px)").matches) {
-                ffdd.classList.toggle("toppp")
+                // ffdd.classList.toggle("toppp")
 
 
             }
 
 
-            if (ffddss.style.transform === "rotate(180deg)") {
-                ffddss.style.transform = "";
-            } else {
-                ffddss.style.transform = "rotate(180deg)";
-            }
+            // if (ffddss.style.transform === "rotate(180deg)") {
+            //     ffddss.style.transform = "";
+            // } else {
+            //     ffddss.style.transform = "rotate(180deg)";
+            // }
 
 
 
@@ -576,15 +579,15 @@ arrivals__div.forEach((e) => {
             console.log(arr)
             combinedFilter()
             if (window.matchMedia("(max-width: 639px)").matches) {
-                ffdd.classList.toggle("toppp")
+                // ffdd.classList.toggle("toppp")
 
 
             }
-            if (ffddss.style.transform === "rotate(180deg)") {
-                ffddss.style.transform = "";
-            } else {
-                ffddss.style.transform = "rotate(180deg)";
-            }
+            // if (ffddss.style.transform === "rotate(180deg)") {
+            //     ffddss.style.transform = "";
+            // } else {
+            //     ffddss.style.transform = "rotate(180deg)";
+            // }
 
         }
 
@@ -599,15 +602,15 @@ colors__div.forEach((e) => {
             console.log(arr)
             combinedFilter()
             if (window.matchMedia("(max-width: 639px)").matches) {
-                ffdd.classList.toggle("toppp")
+                // ffdd.classList.toggle("toppp")
 
 
             }
-            if (ffddss.style.transform === "rotate(180deg)") {
-                ffddss.style.transform = "";
-            } else {
-                ffddss.style.transform = "rotate(180deg)";
-            }
+            // if (ffddss.style.transform === "rotate(180deg)") {
+            //     ffddss.style.transform = "";
+            // } else {
+            //     ffddss.style.transform = "rotate(180deg)";
+            // }
 
 
         } else {
@@ -616,15 +619,15 @@ colors__div.forEach((e) => {
             console.log(arr)
             combinedFilter()
             if (window.matchMedia("(max-width: 639px)").matches) {
-                ffdd.classList.toggle("toppp")
+                // ffdd.classList.toggle("toppp")
 
 
             }
-            if (ffddss.style.transform === "rotate(180deg)") {
-                ffddss.style.transform = "";
-            } else {
-                ffddss.style.transform = "rotate(180deg)";
-            }
+            // if (ffddss.style.transform === "rotate(180deg)") {
+            //     ffddss.style.transform = "";
+            // } else {
+            //     ffddss.style.transform = "rotate(180deg)";
+            // }
 
         }
 
@@ -641,16 +644,16 @@ occasion__div.forEach((e) => {
             // ffdd.style.top = "0px";
             if (window.matchMedia("(max-width: 639px)").matches) {
                 // ffdd.style.top = "-520px";
-                ffdd.classList.toggle("toppp")
+                // ffdd.classList.toggle("toppp")
 
 
             }
          
-            if (ffddss.style.transform === "rotate(180deg)") {
-                ffddss.style.transform = "";
-            } else {
-                ffddss.style.transform = "rotate(180deg)";
-            }
+            // if (ffddss.style.transform === "rotate(180deg)") {
+            //     ffddss.style.transform = "";
+            // } else {
+            //     ffddss.style.transform = "rotate(180deg)";
+            // }
 
 
 
@@ -661,16 +664,16 @@ occasion__div.forEach((e) => {
             // ffdd.style.top = "0px";
             if (window.matchMedia("(max-width: 639px)").matches) {
                 
-                ffdd.classList.toggle("toppp")
+                // ffdd.classList.toggle("toppp")
 
 
             }
-            ffdd.style.top = "-520px";
-            if (ffddss.style.transform === "rotate(180deg)") {
-                ffddss.style.transform = "";
-            } else {
-                ffddss.style.transform = "rotate(180deg)";
-            }
+            // ffdd.style.top = "-520px";
+            // if (ffddss.style.transform === "rotate(180deg)") {
+            //     ffddss.style.transform = "";
+            // } else {
+            //     ffddss.style.transform = "rotate(180deg)";
+            // }
 
         }
 

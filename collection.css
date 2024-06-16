@@ -38,3 +38,11 @@ body{
    top: 110px !important;
 }
 
+.clo{
+    display: flex !important;
+}
+
+.gone{
+    display: none;
+}
+
