@@ -70,3 +70,4 @@ right_arrow.addEventListener("click",()=>{
 
 
 })
+
